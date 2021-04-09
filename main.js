@@ -15,7 +15,8 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(800, 1800)
+    let canvas = createCanvas(800, 1800);
+    canvas.parent("canvas");
     tri.setup();
 
     let i = 0;
@@ -186,8 +187,8 @@ function draw() {
 
                     console.log(tile.index);
 
-                    //tile.changeColor(colors[1].color);
-                    tile.changeColor('red');
+                    tile.changeColor('teal');
+                    //tile.changeColor('red');
 
                     tile.draw();
 
