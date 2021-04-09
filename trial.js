@@ -1,6 +1,6 @@
 class Triangle {
 
-    constructor(index,x1,x2,x3,y1,y2,y3,color) {
+    constructor(index,x1,y1,x2,y2,x3,y3,color) {
         this.index = index;
         this.x1 = x1;
         this.x2 = x2;
@@ -16,16 +16,10 @@ class Triangle {
     }
 
     draw() {
-        //background(220);
-
-        
         fill(this.color);
+        //console.log("words" + this.color)
 
-
-        triangle(this.x1, this.x2, this.x3, this.y1, this.y2, this.y3);
-
-        //add color
-        //fill method
+        triangle(this.x1, this.y1, this.x2, this.y2, this.x3, this.y3);
     }
 
     /*
@@ -62,6 +56,8 @@ class Triangle {
     
     changeColor(clr) {
         this.color = clr;
+
+        console.log("is it red?" + this.color);
 
     //         
     //                tri.draw();
